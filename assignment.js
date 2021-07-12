@@ -10,7 +10,7 @@ function kilometerToMeter(KiloMeter) {
         return "Length can't be zero or negative";
     }
 }
-var resultMeter = kilometerToMeter(5); //input
+let resultMeter = kilometerToMeter(5); //input
 console.log(resultMeter);
 
 
@@ -19,7 +19,7 @@ function budgetCalculator(watch, phone, laptop) {
     let totalCost = (watch * 50) + (phone * 100) + (laptop * 500);
     return totalCost;
 }
-var needBudget = budgetCalculator(2, 5, 2);//input
+let needBudget = budgetCalculator(2, 5, 2);//input
 console.log(needBudget);
 
 
@@ -31,21 +31,21 @@ function hotelCost(night) {
         nightStay = night * 100;
     }
     else if (night <= 20) {
-        let firstTenNightCost = 10 * 100;
+        const firstTenNightCost = 10 * 100;
         let remainingNight = night - 10;
         let remainingNightCost = remainingNight * (100 - 20); //20 taka off after 10 nights
         nightStay = firstTenNightCost + remainingNightCost;
     }
     else {
-        let firstTenNightCost = 10 * 100;
-        let secondTenNightCost = 10 * 80;
+        const firstTenNightCost = 10 * 100;
+        const secondTenNightCost = 10 * 80;
         let remainingNight = night - 20;
         let remainingNightCost = remainingNight * 50; // 50 taka off after 20 nights
         nightStay = firstTenNightCost + secondTenNightCost + remainingNightCost;
     }
     return nightStay;
 }
-var totalCost = hotelCost(62);//input
+let totalCost = hotelCost(62);//input
 console.log(totalCost);
 
 
@@ -60,6 +60,6 @@ function megaFriend(friendList) {
     }
     return mega;
 }
-var friendList = ["abdullah", "rohim", "kamrun", "obaidullah", "AklimaAkhter"]
-var bigNameFriend = megaFriend(friendList);//input
+let friendList = ["abdullah", "rohim", "kamrun", "obaidullah", "AklimaAkhter"]
+let bigNameFriend = megaFriend(friendList);//input
 console.log(bigNameFriend);
