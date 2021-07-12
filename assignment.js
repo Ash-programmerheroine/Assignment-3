@@ -1,4 +1,5 @@
-//
+//https://github.com/Ash-programmerheroine/Assignment-3
+
 // 1st function: kilometerToMeter
 function kilometerToMeter(KiloMeter) {
     if (KiloMeter > 0) {
@@ -8,24 +9,44 @@ function kilometerToMeter(KiloMeter) {
     else {
         return "Length can't be zero or negative";
     }
-
 }
-var resultMeter = kilometerToMeter(5);
+var resultMeter = kilometerToMeter(5); //input
 console.log(resultMeter);
 
 
 //2nd function : budgetCalculator
 function budgetCalculator(watch, phone, laptop) {
-    var totalCost = (watch * 50) + (phone * 100) + (laptop * 500);
+    let totalCost = (watch * 50) + (phone * 100) + (laptop * 500);
     return totalCost;
-
 }
-var needBudget = budgetCalculator(2, 5, 0);
+var needBudget = budgetCalculator(2, 5, 2);//input
 console.log(needBudget);
 
 
 //3rd function : hotelCost
+function hotelCost(night) {
+    let nightStay = 0;
 
+    if (night <= 10) {
+        nightStay = night * 100;
+    }
+    else if (night <= 20) {
+        let firstTenNightCost = 10 * 100;
+        let remainingNight = night - 10;
+        let remainingNightCost = remainingNight * (100 - 20); //20 taka off after 10 nights
+        nightStay = firstTenNightCost + remainingNightCost;
+    }
+    else {
+        let firstTenNightCost = 10 * 100;
+        let secondTenNightCost = 10 * 80;
+        let remainingNight = night - 20;
+        let remainingNightCost = remainingNight * 50; // 50 taka off after 20 nights
+        nightStay = firstTenNightCost + secondTenNightCost + remainingNightCost;
+    }
+    return nightStay;
+}
+var totalCost = hotelCost(62);//input
+console.log(totalCost);
 
 
 //4th function : megaFriend
@@ -40,5 +61,5 @@ function megaFriend(friendList) {
     return mega;
 }
 var friendList = ["abdullah", "rohim", "kamrun", "obaidullah", "AklimaAkhter"]
-var bigNameFriend = megaFriend(friendList);
+var bigNameFriend = megaFriend(friendList);//input
 console.log(bigNameFriend);
