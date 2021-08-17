@@ -7,8 +7,8 @@ function kilometerToMeter(KiloMeter) {
         return "Length can't be zero or negative";
         
     }
-    else {
-        let meter = KiloMeter * 1000;
+    else {  
+        meter = KiloMeter * 1000;
         return meter;
     }
 }
