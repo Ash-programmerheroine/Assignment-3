@@ -57,20 +57,20 @@ function hotelCost(night) {
         const firstTenNightCost = 10 * 100;
         const secondTenNightCost = 10 * 80;
         remainingNight = night - 20;
-        remainingNightCost = remainingNight * 50; // 50 taka off after 20 nights
+        remainingNightCost = remainingNight *(100 - 50); // 50 taka off after 20 nights
         nightStayCost = firstTenNightCost + secondTenNightCost + remainingNightCost;
     }
     return nightStayCost;
 }
-let Hotelbill = hotelCost(62);//input
-console.log(Hotelbill);
+let hotelBill = hotelCost(62);//input
+console.log(hotelBill);
 
 
 //4th function : megaFriend
-function megaFriend(friendList) {
-    var mega = friendList[0];
-    for (let i = 0; i < friendList.length; i++) {
-        const element = friendList[i];
+function megaFriend(friendNameList) {
+    var mega = friendNameList[0];
+    for (let i = 0; i < friendNameList.length; i++) {
+        const element = friendNameList[i];
         if (typeof element != "string"){
             return "ooopsss...Please Enter your friend's name...only string is accepted inside array...."
         }
@@ -80,6 +80,6 @@ function megaFriend(friendList) {
     }
     return mega;
 }
-let friendList = ["abdullah", "rohim", "kamrun", "obaidullah", "AklimaAkhter"]
-let bigNameFriend = megaFriend(friendList);//input
-console.log(bigNameFriend);
+let friendNameList = ["abdullah", "rohim", "kamrun", "obaidullah", "AklimaAkhter"]
+let biggestName = megaFriend(friendNameList);//input
+console.log(biggestName);
